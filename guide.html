@@ -1,0 +1,45 @@
+A script and web interface for mirroring XML of the PubMed Central Open Access Subset 
+
+
+Code: http://github.com/mchelen/pmc.oas.xml.mirror
+
+
+Based on version 0.1: http://github.com/mchelen/pmc.oas.xml.mirror/tree/0.1
+
+
+mirror.sh
+
+  Downloads and extracts current copy of PubMed Open Access Subset XML archives.
+  
+  Loop through and download each archive with wget then extract to a specified directory.
+  
+ 
+  <script src="http://gist.github.com/452532.js?file=pmc.oas.xml.mirror.download.extract"></script>
+  
+    A faster download client, aria2c, can be used for multiple concurrent connections.
+  
+ 
+index.php
+  
+  Web interface to provide XML file of requested PubMed Central ID.
+  
+  We search the filesystem with user input PMC ID
+  
+  <script src="http://gist.github.com/452589.js?file=pmc.oas.xml.mirror.find.file"></script>
+  
+  
+  Display the file as XML
+  
+  <script src="http://gist.github.com/452590.js?file=pmc.oas.xml.mirror.display.file"></script>
+  
+  
+
+form.html
+  
+  Form for user input of PubMed Central ID. Passed as GET variable "pmcid"
+  
+  http://pmcxml.opensci.info/?pmcid=123456
+
+Browse:
+
+http://pub.opensci.info/pmc.oas.xml.mirror/files/
