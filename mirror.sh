@@ -7,14 +7,9 @@
 # path for temporary files
 tempdir=tmp
 mkdir -p $tempdir
-# main directory for output
-outputdir=output
 # directory for article files
 filedir=files
 mkdir -p $filedir
-# remove old output files
-rm -r $outputdir 2> /dev/null
-mkdir -p $outputdir
 # ftp server and remote path
 ftp=ftp.ncbi.nlm.nih.gov
 ftppath=pub/pmc
@@ -25,9 +20,9 @@ do
  cururl=ftp://$ftp/$ftppath/$curfile
  echo "Downloading $cururl to $tempdir"
 # download file to temporary directory
-# wget -P $temppath $cururl
+ wget -P $tempdir $cururl
 # use up to 5 concurrent connections
- aria2c -d $tempdir -s 5 $cururl
+# aria2c -d $tempdir -s 5 $cururl
  echo "Exctracting $tempdir/$curfile to $filedir"
  tar -C $filedir --totals -xzf $tempdir/$curfile
  echo Done extracting $tempdir/$curfile
