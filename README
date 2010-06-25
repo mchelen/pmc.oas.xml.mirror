@@ -1,0 +1,10 @@
+mirror.sh
+
+  Downloads and extracts current copy of PubMed Open Access Subset XML archives.
+ 
+index.php
+  
+  Web interface to provide XML file of requested PubMed ID.
+  
+
+
