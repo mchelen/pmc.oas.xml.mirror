@@ -4,7 +4,11 @@ mirror.sh
  
 index.php
   
-  Web interface to provide XML file of requested PubMed ID.
+  Web interface that accepts PubMed Central ID and provides article XML.
+  
+form.html
+
+  Form for user input of PubMed Central ID.
   
 
 
